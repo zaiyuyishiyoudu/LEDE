@@ -1,0 +1,225 @@
+msgid "Frp Setting"
+msgstr "FRP穿透"
+
+msgid "Frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet."
+msgstr "FRP是一个快速反向代理，可以帮助您将NAT或防火墙后面的本地服务器公开到Internet"
+
+msgid "Global Setting"
+msgstr "全局设置"
+
+msgid "Other Settings"
+msgstr "其他设置"
+
+msgid "Client Log"
+msgstr "客户端日志"
+
+msgid "Enable State"
+msgstr "启用状态"
+
+msgid "Token"
+msgstr "令牌"
+
+msgid "Time duration between server of frpc and frps mustn't exceed 15 minutes."
+msgstr "frpc服务器与frps之间的时间间隔不得超过15分钟"
+
+msgid "Vhost HTTP Port"
+msgstr "节点HTTP端口"
+
+msgid "Vhost HTTPS Port"
+msgstr "节点HTTPS端口"
+
+msgid "Exit program when first login failed"
+msgstr "首次登录失败时退出程序"
+
+msgid "decide if exit program when first login failed, otherwise continuous relogin to frps."
+msgstr "决定第一次登录失败时是否退出程序，否则继续重新登录到frps"
+
+msgid "TCP Stream Multiplexing"
+msgstr "TCP流多路复用"
+
+msgid "Default is Ture. This feature in frps.ini and frpc.ini must be same."
+msgstr "默认值为“真”。frps.ini和frpc.ini中的此功能必须相同"
+
+msgid "Protocol Type"
+msgstr "协议类型"
+
+msgid "Frp support kcp protocol since v0.12.0"
+msgstr "自v0.12.0起的FRP支持KCP协议"
+
+msgid "TCP Protocol"
+msgstr "TCP协议"
+
+msgid "KCP Protocol"
+msgstr "KCP协议"
+
+msgid "Connect frps by HTTP PROXY"
+msgstr "通过HTTP代理连接FRP"
+
+msgid "frpc can connect frps using HTTP PROXY"
+msgstr "frpc可以使用http代理连接frps"
+
+msgid "HTTP PROXY"
+msgstr "HTTP代理"
+
+msgid "Enable Connection Pool"
+msgstr "启用连接池"
+
+msgid "This feature is fit for a large number of short connections."
+msgstr "此功能适用于大量短连接"
+
+msgid "Connection Pool"
+msgstr "连接池"
+
+msgid "Connections will be established in advance."
+msgstr "会预先和服务端建立起指定数量的连接"
+
+msgid "Service registration interval"
+msgstr "服务注册间隔"
+
+msgid "0 means disable this feature, unit: min"
+msgstr "0表示禁用此功能，单位：分"
+
+msgid "Log Level"
+msgstr "日志级别"
+
+msgid "Trace"
+msgstr "痕迹"
+
+msgid "Log Keepd Max Days"
+msgstr "日志记录最长天数"
+
+msgid "Services List"
+msgstr "服务器列表"
+
+msgid "Service Remark Name"
+msgstr "服务器备注名称"
+
+msgid "Frp Protocol Type"
+msgstr "FRP协议类型"
+
+msgid "Domain/Subdomain"
+msgstr "域名/子域名"
+
+msgid "Remote Port"
+msgstr "远程端口"
+
+msgid "Local Host Address"
+msgstr "本地主机地址"
+
+msgid "Local Host Port"
+msgstr "本地主机端口"
+
+msgid "Use Encryption"
+msgstr "使用加密"
+
+msgid "Use Compression"
+msgstr "使用压缩"
+
+msgid "Frp Domain Config"
+msgstr "FRP域名配置"
+
+msgid "Config Frp Protocol"
+msgstr "配置FRP协议"
+
+msgid "Domain Type"
+msgstr "域名类型"
+
+msgid "Custom Domains"
+msgstr "自定义域名"
+
+msgid "If SubDomain is used, Custom Domains couldn't be subdomain or wildcard domain of the maindomain(subdomain_host)."
+msgstr "如果使用子域名，自定义域名不能是主域（子域名\主机）的子域名或通配符域域名"
+
+msgid "SubDomain"
+msgstr "子域名"
+
+msgid "subdomain_host must be configured in server: frps in advance."
+msgstr "必须提前在server:frps中配置子域主机"
+
+msgid "Both the above two Domain types"
+msgstr "以上两种域名类型"
+
+msgid "Use Plugin"
+msgstr "使用插件"
+
+msgid "If plugin is defined, local_ip and local_port is useless, plugin will handle connections got from frps."
+msgstr "如果定义了plugin，则local-ip和local-port是无用的，plugin将处理从frps获得的连接"
+
+msgid "Encrypted the communication between frpc and frps, will effectively prevent the traffic intercepted."
+msgstr "对frpc和frps之间的通信进行加密，可以有效地防止被截获的流量"
+
+msgid "The contents will be compressed to speed up the traffic forwarding speed, but this will consume some additional cpu resources."
+msgstr "内容将被压缩以加快流量转发速度，但这将消耗一些额外的CPU资源"
+
+msgid "<font color=\"red\">Please ensure the remark name is unique.</font>"
+msgstr "<font color=\"red\">请确保备注名称是唯一的</font>"
+
+msgid "Enable URL routing"
+msgstr "启用URL路由"
+
+msgid "Frp support forward http requests to different backward web services by url routing."
+msgstr "FRP支持通过URL路由将HTTP请求转发到不同的反向Web服务"
+
+msgid "Password protecting your web service"
+msgstr "保护Web服务的密码"
+
+msgid "Http username and password are safety certification for http protocol."
+msgstr "HTTP用户名和密码是HTTP协议的安全认证"
+
+msgid "Rewriting the Host Header"
+msgstr "重写主机头"
+
+msgid "Frp can rewrite http requests with a modified Host header."
+msgstr "FRP可以使用修改后的主机头重写HTTP请求"
+
+msgid "Plugin Unix Sock Path"
+msgstr "插件Unix sock路径"
+
+msgid "HTTP UserName"
+msgstr "http用户名"
+
+msgid "HTTP PassWord"
+msgstr "http密码"
+
+msgid "HTTP Proxy Password"
+msgstr "HTTP代理密码"
+
+msgid "HTTP Proxy UserName"
+msgstr "HTTP代理用户名"
+
+msgid "Proxy Authentication"
+msgstr "代理身份验证"
+
+msgid "Other PCs could access the Internet through frpc's network by using http_proxy plugin."
+msgstr "其他PC可以使用http_代理插件通过frpc的网络访问互联网"
+
+msgid "Choose Plugin"
+msgstr "选择插件"
+
+msgid "URL routing"
+msgstr "URL路由"
+
+msgid "Http requests with url prefix /news will be forwarded to this service."
+msgstr "带有URL前缀/news的HTTP请求将转发到此服务"
+
+msgid "Host Header"
+msgstr "主机标头"
+
+msgid "The Host header will be rewritten to match the hostname portion of the forwarding address."
+msgstr "主机头将被重写以匹配转发地址的主机名部分"
+
+msgid "unix_domain_socket"
+msgstr "Unix_域_套接字"
+
+msgid "STCP Server Name"
+msgstr "STCP服务器名称"
+
+msgid "STCP Server Name is Service Remark Name of STCP Server"
+msgstr "STCP服务器名称是STCP服务器的服务备注名称"
+
+msgid "STCP Screct Key"
+msgstr "STCP密钥"
+
+msgid "STCP Server"
+msgstr "STCP服务"
+

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+uci -q batch <<-EOF >/dev/null
+	delete ucitrack.@wifidogx[-1]
+	add ucitrack wifidogx
+	set ucitrack.@wifidogx[-1].init=wifidogx
+	commit ucitrack
+EOF
+
+rm -f /tmp/luci-indexcache
+exit 0

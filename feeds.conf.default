@@ -1,0 +1,5 @@
+src-git packages https://github.com/zaiyuyishiyoudu/packages.git
+src-git luci https://github.com/zaiyuyishiyoudu/luci.git
+#src-git luci https://github.com/zaiyuyishiyoudu/morenluci.git
+src-git routing https://git.openwrt.org/feed/routing.git
+#默认是x86_64的luci 如果使用其他架构的请注释默认与去除另外的注释

@@ -1,0 +1,47 @@
+     _________
+    /        /\      _    ___ ___  ___
+   /  LE    /  \    | |  | __|   \| __|
+  /    DE  /    \   | |__| _|| |) | _|
+ /________/  LE  \  |____|___|___/|___|                      萌萌哒
+ \        \   DE /
+  \    LE  \    /  -----------------------------------------------------------
+   \  DE    \  /            人生若只如初见                唯有相视无言
+    \________\/    -----------------------------------------------------------
+
+# 注意：
+1.不要用 root 用户 git 和编译
+2.源码建议放在用户根目录 不要丢桌面
+3.不要从windows里拿源码 因为权限问题可能会出错 需要对比修改权限
+4. 国内用户编译前最好准备好梯子
+5. 默认登陆IP 192.168.1.1, 密码 空
+
+# 搭建环境：
+ubuntu:首先装好 Ubuntu 64bit，或  Ubuntu  14 LTS x64
+
+sudo apt-get install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev
+
+centos:版本自已选。。。
+
+yum install subversion binutils bzip2 gcc gcc-c++ gawk gettext flex ncurses-devel zlib-devel make patch unzip perl-ExtUtils-MakeMaker  glibc glibc-devel glibc-static quilt ncurses-lib sed sdcc intltool sharutils bison wget git-core openssl-devel xz  zlib-static
+
+# 拉取源码：
+git clone https://github.com/zaiyuyishiyoudu/LEDE 命令下载好源代码，然后 cd LEDE 进入目录
+./scripts/feeds update -a 命令下好载额外源码
+./scripts/feeds install -a 命令应用额外源码关联
+make menuconfig 进入定制界面
+
+# 额外命令：
+1.make download V=s 只下载dl库 你可以开双终端 一个下载 一个编译 以节约编译时间
+2.make kernel_menuconfig 进入内核定制界面
+
+# 编译命令：
+1.make 
+2.make V=99
+3.make -j V=99 全速编译 不建议使用
+4.make -j1 V=99 [-j1 1是线程数，比如你的CPU是双核心四线程 可以是make -j4 V=99 四核心八线程 可以是make -j8 V=99 以此类推
+
+# 后话：
+默认luci是x86的 如编译其他平台请feeds.conf.default用#注释掉并去除原有注释
+luci已作 x86 加速修改 其他平台CPU可能会吃不消 同步软件仅支持x86其他平台需要自行到官网下载二进制文件替换 其他平台慎用！！！
+或者你不要用我的luci 不要吐槽。。。
+可以修改version以个性你的名称
