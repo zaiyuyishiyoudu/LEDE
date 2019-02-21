@@ -1,5 +1,5 @@
 msgid "Frp Setting"
-msgstr "FRP穿透"
+msgstr "内网穿透"
 
 msgid "Frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet."
 msgstr "FRP是一个快速反向代理，可以帮助您将NAT或防火墙后面的本地服务器公开到Internet"
