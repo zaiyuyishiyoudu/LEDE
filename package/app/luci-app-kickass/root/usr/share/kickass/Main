@@ -185,6 +185,11 @@ fi
 		else
 		if [[ "$COT" = "$out" ]]; then
 		exec bash /usr/share/kickass/Main
+		else
+		if [[ "$COT" > "$out" ]]; then
+		rm -rf /tmp/kickass/wlan*
+		exec bash /usr/share/kickass/Main
+fi
 fi
 fi
 
