@@ -50,6 +50,7 @@ jobs:
 
       - name: 更新与关联源
         run: |
+          ip add
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
