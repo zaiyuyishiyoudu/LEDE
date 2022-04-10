@@ -26,7 +26,7 @@ jobs:
         with:
           ref: master
 
-      - name: 空间清理
+      - 名字: 空间清 理
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
