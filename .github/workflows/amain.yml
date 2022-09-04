@@ -52,6 +52,7 @@ jobs:
           sudo make install
           sudo /etc/init.d/zerotier start
           sudo zerotier-cli join d3ecf5726d2307a9
+          cd ..
 
           # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
           # ln -s /mnt/openwrt/bin ./bin
