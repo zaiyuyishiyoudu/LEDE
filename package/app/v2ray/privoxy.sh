@@ -19,9 +19,7 @@ echo '---------------------------------'
 
 sleep 60
 
-# ZT="$(for zt in $(ls /sys/class/net | grep 'zt')
-ZT="$(ifconfig | grep zt | sed 's/://g' | awk '{print $1}')" ; do
-(sudo zerotier-cli listnetworks | grep -q $zt) && echo $zt ; done )"
+ZT="(ifconfig | grep zt | sed 's/://g' | awk '{print $1}')"
 for ZT in $ZT ; do
 
 for data in $(sudo zerotier-cli listnetworks | grep $ZT) ; do
