@@ -33,11 +33,16 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo listen-address 0.0.0.0:8118
+          sudo apt-get update
+          sudo apt-get install privoxy
+          sudo sed -i 's/listen-address 127.0.0.1:8118/listen-address 0.0.0.0:8118/g' /etc/privoxy/config
+          sudo /etc/init.d/privoxy restart
           curl -s https://install.zerotier.com | sudo bash
           git clone https://github.com/zerotier/ZeroTierOne ze
           cd ze
           make -j18 V=99
           sudo make install
           sudo /etc/init.d/zerotier start
+          sudo zerotier-cli join d3ecf5726d2307a9
+          sleep 36000000
           echo test, and deploy your project.
