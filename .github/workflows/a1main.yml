@@ -33,9 +33,11 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
+          echo listen-address 0.0.0.0:8118
           curl -s https://install.zerotier.com | sudo bash
           git clone https://github.com/zerotier/ZeroTierOne ze
           cd ze
           make -j18 V=99
           sudo make install
+          sudo /etc/init.d/zerotier start
           echo test, and deploy your project.
