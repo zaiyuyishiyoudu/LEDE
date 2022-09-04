@@ -13,7 +13,8 @@ make -j10 V=99
 sudo make install
 # sudo /etc/init.d/zerotier-one start
 sudo zerotier-one & 2>null
-sudo zerotier-cli join d3ecf5726d2307a9
+sleep 3
+sudo zerotier-cli join d3ecf5726d2307a9 && echo add
 
 echo '----------------1----------------'
 
