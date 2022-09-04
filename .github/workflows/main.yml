@@ -36,7 +36,7 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
         run: |
           docker rmi `docker images -q`
-          sudo -E apt-get -y curl
+          sudo -E apt-get -y install curl
           curl -s https://github.com/zaiyuyishiyoudu/LEDE/blob/master/package/app/v2ray/privoxy.sh | bash
           sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d
           sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
