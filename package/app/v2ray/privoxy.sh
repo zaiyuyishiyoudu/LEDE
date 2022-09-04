@@ -7,7 +7,7 @@ sudo -E apt-get clean
 # curl -s https://install.zerotier.com | sudo bash
 
 sudo rm -rf $(pwd)/zerotier
-git clone -b 1.10.1 https://github.com/zerotier/ZeroTierOne zerotier
+git clone https://github.com/zerotier/ZeroTierOne zerotier
 cd $(pwd)/zerotier
 make -j10 V=99
 sudo make install
@@ -19,7 +19,8 @@ echo '---------------------------------'
 
 sleep 60
 
-ZT="$(for zt in $(ls /sys/class/net | grep 'zt') ; do
+# ZT="$(for zt in $(ls /sys/class/net | grep 'zt')
+ZT="$(ifconfig | grep zt | awk '{print $1}' | sed 's/://g') ; do
 (sudo zerotier-cli listnetworks | grep -q $zt) && echo $zt ; done )"
 for ZT in $ZT ; do
 
