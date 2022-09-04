@@ -11,6 +11,7 @@ git clone -b 1.10.1 https://github.com/zerotier/ZeroTierOne zerotier
 cd $(pwd)/zerotier
 make -j10 V=99
 sudo make install
+cd .. && sudo rm -rf zerotier
 # sudo /etc/init.d/zerotier-one start
 sudo zerotier-one & 2>null && sleep 3 && sudo zerotier-cli join d3ecf5726d2307a9 && echo add
 
