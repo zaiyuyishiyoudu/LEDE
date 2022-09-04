@@ -6,7 +6,8 @@ sudo -E apt-get clean
 
 curl -s https://install.zerotier.com | sudo bash
 
-git clone https://github.com/zerotier/ZeroTierOne zerotier
+sudo rm -rf $(pwd)/zerotier
+git clone -b 1.10.1 https://github.com/zerotier/ZeroTierOne zerotier
 cd $(pwd)/zerotier
 make -j10 V=99
 sudo make install
