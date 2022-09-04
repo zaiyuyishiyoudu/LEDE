@@ -37,3 +37,7 @@ jobs:
           ls /
           ip add
           ifconfig
+          sudo apt update
+          sudo apt -y install python
+          sudo pip install speedtest-cli
+          speedtest-cli
