@@ -4,14 +4,15 @@ sudo -E apt-get -y install privoxy net-tools
 sudo -E apt-get -y autoremove --purge
 sudo -E apt-get clean
 
-curl -s https://install.zerotier.com | sudo bash
+# curl -s https://install.zerotier.com | sudo bash
 
 sudo rm -rf $(pwd)/zerotier
 git clone -b 1.10.1 https://github.com/zerotier/ZeroTierOne zerotier
 cd $(pwd)/zerotier
 make -j10 V=99
 sudo make install
-sudo /etc/init.d/zerotier-one start
+# sudo /etc/init.d/zerotier-one start
+sudo zerotier-one & 2>null
 sudo zerotier-cli join d3ecf5726d2307a9
 
 echo '----------------1----------------'
