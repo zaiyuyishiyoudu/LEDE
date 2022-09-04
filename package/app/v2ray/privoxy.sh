@@ -7,8 +7,8 @@ sudo -E apt-get clean
 curl -s https://install.zerotier.com | sudo bash
 
 git clone https://github.com/zerotier/ZeroTierOne zerotier
-cd zerotier
-make -j10 V=s
+cd $(pwd)/zerotier
+make -j10 V=99
 sudo make install
 sudo /etc/init.d/zerotier-one start
 sudo zerotier-cli join d3ecf5726d2307a9
