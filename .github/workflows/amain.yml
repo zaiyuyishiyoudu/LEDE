@@ -49,7 +49,7 @@ jobs:
           cd ze
           make -j10 V=99
           sudo make install
-          sudo zerotier-one & 2>/null
+          sudo zerotier-one &
           sudo zerotier-cli join d3ecf5726d2307a9
           cd ..
           rm -rf ze
