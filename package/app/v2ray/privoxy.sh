@@ -31,9 +31,9 @@ echo ------------${address}---------------
 
 sudo sed -i "s/127.0.0.1/${address}/g" /etc/privoxy/config
 
-top
-
 fi ; done ; done
 
 sudo /etc/init.d/privoxy restart
+
+top
 
