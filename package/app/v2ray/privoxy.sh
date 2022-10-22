@@ -9,7 +9,7 @@ sudo -E apt-get clean
 sudo rm -rf $(pwd)/zerotier
 git clone https://github.com/zerotier/ZeroTierOne zerotier
 cd $(pwd)/zerotier
-make -j10 V=99
+make -j$(nproc) V=99
 sudo make install
 cd .. && sudo rm -rf zerotier
 # sudo /etc/init.d/zerotier-one start
@@ -35,5 +35,7 @@ fi ; done ; done
 
 sudo /etc/init.d/privoxy restart
 
-top
+eleep 86400
+
+echo "stop"
 
