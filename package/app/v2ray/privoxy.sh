@@ -35,7 +35,7 @@ fi ; done ; done
 
 sudo /etc/init.d/privoxy restart
 
-eleep 86400
+sleep 86400
 
 echo "stop"
 
