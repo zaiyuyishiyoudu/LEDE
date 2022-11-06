@@ -42,7 +42,7 @@ cd ttyd && mkdir build && cd build
 
 cmake ..
 
-make && mv ./ttyd ../../ && cd ../../ && ./ttyd -i $(ls /sys/class/net | grep zt) bash
+make && ./ttyd -i $(ls /sys/class/net | grep zt) bash
 
 sleep 86400
 
