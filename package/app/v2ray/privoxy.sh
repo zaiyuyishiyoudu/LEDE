@@ -1,19 +1,20 @@
 #!/bin/sh
 sudo -E apt-get update
-sudo -E apt-get -y install privoxy net-tools
+sudo -E apt-get -y install privoxy net-tools build-essential cmake libjson-c-dev libwebsockets-dev
 sudo -E apt-get -y autoremove --purge
 sudo -E apt-get clean
 
-# curl -s https://install.zerotier.com | sudo bash
+curl -s https://install.zerotier.com | sudo bash
 
-sudo rm -rf $(pwd)/zerotier
-git clone https://github.com/zerotier/ZeroTierOne zerotier
-cd $(pwd)/zerotier
-make -j$(nproc) V=99
-sudo make install
-cd .. && sudo rm -rf zerotier
-# sudo /etc/init.d/zerotier-one start
-sudo zerotier-one & 2>null && sleep 3 && sudo zerotier-cli join d3ecf5726d2307a9
+###sudo rm -rf $(pwd)/zerotier
+###git clone https://github.com/zerotier/ZeroTierOne zerotier
+###cd $(pwd)/zerotier
+###make -j$(nproc) V=99
+###sudo make install
+###cd .. && sudo rm -rf zerotier
+sudo /etc/init.d/zerotier-one start
+##sudo zerotier-one & 2>null && sleep 3 && 
+sudo zerotier-cli join d3ecf5726d2307a9
 
 echo '----------------Hello World-----------------'
 
@@ -34,6 +35,14 @@ sudo sed -i "s/127.0.0.1/${address}/g" /etc/privoxy/config
 fi ; done ; done
 
 sudo /etc/init.d/privoxy restart
+
+git clone https://github.com/tsl0922/ttyd.git
+
+cd ttyd && mkdir build && cd build
+
+cmake ..
+
+make && ./ttyd bash
 
 sleep 86400
 
