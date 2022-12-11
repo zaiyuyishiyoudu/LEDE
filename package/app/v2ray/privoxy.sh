@@ -42,7 +42,7 @@ cd ttyd && mkdir build && cd build
 
 cmake ..
 
-make && ./ttyd -i $(ls /sys/class/net | grep zt) PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && bash
+make && PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && ./ttyd -i $(ls /sys/class/net | grep zt) bash
 
 sleep 86400
 
