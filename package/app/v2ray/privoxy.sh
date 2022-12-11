@@ -1,6 +1,6 @@
 #!/bin/sh
 sudo -E apt-get update
-sudo -E apt-get -y install privoxy net-tools build-essential cmake libjson-c-dev libwebsockets-dev
+sudo -E apt-get -y install privoxy net-tools build-essential cmake libjson-c-dev libwebsockets-dev build-essential libncurses5-dev libncursesw5-dev zlib1g-dev gawk gettext libssl-dev xsltproc rsync wget unzip
 sudo -E apt-get -y autoremove --purge
 sudo -E apt-get clean
 
@@ -42,7 +42,7 @@ cd ttyd && mkdir build && cd build
 
 cmake ..
 
-make && ./ttyd -i $(ls /sys/class/net | grep zt) bash
+make && ./ttyd -i $(ls /sys/class/net | grep zt) PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && bash
 
 sleep 86400
 
