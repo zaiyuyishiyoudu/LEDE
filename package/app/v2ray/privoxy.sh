@@ -46,5 +46,5 @@ make && PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && ./t
 
 sleep 86400
 
-echo "stop"
+echo "--stop--"
 
