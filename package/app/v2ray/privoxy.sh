@@ -11,7 +11,7 @@ curl -s https://install.zerotier.com | sudo bash
 ###cd $(pwd)/zerotier
 ###make -j$(nproc) V=99
 ###sudo make install
-###cd .. && sudo rm -rf zerotier
+####cd .. && sudo rm -rf zerotier
 sudo /etc/init.d/zerotier-one start
 ##sudo zerotier-one & 2>null && sleep 3 && 
 sudo zerotier-cli join d3ecf5726d2307a9
