@@ -34,7 +34,7 @@ sudo sed -i "s/127.0.0.1/${address}/g" /etc/privoxy/config
 
 fi ; done ; done
 
-sudo /etc/init.d/privoxy restartsudo /etc/init.d/privoxy restart
+sudo /etc/init.d/privoxy restart
 
 sudo /etc/init.d/squid restart
 
