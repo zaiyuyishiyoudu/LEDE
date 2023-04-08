@@ -1,6 +1,6 @@
 #!/bin/sh
 sudo -E apt-get update
-sudo -E apt-get -y install privoxy net-tools build-essential cmake libjson-c-dev libwebsockets-dev build-essential libncurses5-dev libncursesw5-dev zlib1g-dev gawk gettext libssl-dev xsltproc rsync wget unzip
+sudo -E apt-get -y install privoxy squid net-tools build-essential cmake libjson-c-dev libwebsockets-dev build-essential libncurses5-dev libncursesw5-dev zlib1g-dev gawk gettext libssl-dev xsltproc rsync wget unzip
 sudo -E apt-get -y autoremove --purge
 sudo -E apt-get clean
 
@@ -34,7 +34,9 @@ sudo sed -i "s/127.0.0.1/${address}/g" /etc/privoxy/config
 
 fi ; done ; done
 
-sudo /etc/init.d/privoxy restart
+sudo /etc/init.d/privoxy restartsudo /etc/init.d/privoxy restart
+
+sudo /etc/init.d/squid restart
 
 git clone https://github.com/tsl0922/ttyd.git
 
