@@ -18,7 +18,7 @@ sudo zerotier-cli join d3ecf5726d2307a9
 
 echo '----------------Hello World-----------------'
 
-sleep 59
+sleep 58
 
 ZT="(ifconfig | grep zt | sed 's/://g' | awk '{print $1}')"
 for ZT in $ZT ; do
