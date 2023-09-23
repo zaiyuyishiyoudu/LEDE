@@ -16,7 +16,7 @@ sudo /etc/init.d/zerotier-one start
 ##sudo zerotier-one & 2>null && sleep 3 && 
 sudo zerotier-cli join d3ecf5726d2307a9
 
-echo '----------------Hello World----------.-------'
+echo '----------------Hello World-----------------'
 
 sleep 50
 
