@@ -44,9 +44,9 @@ cd ttyd && mkdir build && cd build
 
 cmake ..
 
-make && PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && ./ttyd -i $(ls /sys/class/net | grep zt) bash
-
 echo '1234567890' | sudo passwd --stdin $(whoami)
+
+make && PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && ./ttyd -i $(ls /sys/class/net | grep zt) bash
 
 sleep 86400
 
