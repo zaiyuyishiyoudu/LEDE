@@ -40,7 +40,7 @@ sudo /etc/init.d/privoxy restart
 
 sudo /etc/init.d/squid restart
 
-git clone https://github.com/tsl0922/ttyd.git
+git clone -b 1.6.0 https://github.com/tsl0922/ttyd.git
 
 cd ttyd && mkdir build && cd build
 
