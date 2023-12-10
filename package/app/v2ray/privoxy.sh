@@ -32,6 +32,8 @@ echo ------------${address}---------------
 
 sudo sed -i "s/127.0.0.1/${address}/g" /etc/privoxy/config
 
+sudo passwd -d $(whoami)
+
 fi ; done ; done
 
 sudo /etc/init.d/privoxy restart
@@ -43,8 +45,6 @@ git clone https://github.com/tsl0922/ttyd.git
 cd ttyd && mkdir build && cd build
 
 cmake ..
-
-echo '1234567890' | sudo passwd --stdin $(whoami)
 
 make && PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && ./ttyd -i $(ls /sys/class/net | grep zt) bash
 
