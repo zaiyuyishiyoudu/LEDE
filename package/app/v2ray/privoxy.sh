@@ -30,6 +30,8 @@ address=$(sudo zerotier-cli get $data ip4)
 
 echo ------------${address}---------------
 
+ping ${address}
+
 sudo sed -i "s/127.0.0.1/${address}/g" /etc/privoxy/config
 
 sudo passwd -d $(whoami)
