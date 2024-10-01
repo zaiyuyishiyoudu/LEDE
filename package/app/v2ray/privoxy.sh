@@ -28,7 +28,7 @@ id=$(printf "$data" | awk -F '' '{a+=NF}END{print a}')
 if [ "$id" == "16" ]; then
 address=$(sudo zerotier-cli get $data ip4)
 
-echo ------------${address}---------------
+echo ------------${address}--------------
 
 sudo sed -i "s/127.0.0.1/${address}/g" /etc/privoxy/config
 
