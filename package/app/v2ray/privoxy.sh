@@ -16,8 +16,7 @@ sudo /etc/init.d/zerotier-one start
 ##sudo zerotier-one & 2>null && sleep 3 && 
 sudo zerotier-cli join d3ecf5726d2307a9
 
-echo '----------------Hello World-----------------1'
-echo '1234567890' | passwd --stdin runner
+echo '----------------Hello World-----------------'
 
 sleep 40
 
