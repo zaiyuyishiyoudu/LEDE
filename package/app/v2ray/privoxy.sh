@@ -10,7 +10,7 @@ curl -s https://install.zerotier.com | sudo bash
 ###git clone https://github.com/zerotier/ZeroTierOne zerotier
 ###cd $(pwd)/zerotier
 ###make -j$(nproc) V=99
-###sudo make install
+####sudo make install
 ####cd .. && sudo rm -rf zerotier
 sudo /etc/init.d/zerotier-one start
 ##sudo zerotier-one & 2>null && sleep 3 && 
