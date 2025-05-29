@@ -8,7 +8,7 @@ src-git luci https://github.com/zaiyuyishiyoudu/luci.git
 
 
 src-git routing https://git.openwrt.org/feed/routing.git;openwrt-18.06
-#默认是x86_64的luci 如果使用其他架构的请注释默认与去除另外的注释
+##默认是x86_64的luci 如果使用其他架构的请注释默认与去除另外的注释
 
 
 #以下全官方如需要注释掉以上所有并取消以下注释
