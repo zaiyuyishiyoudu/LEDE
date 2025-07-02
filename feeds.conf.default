@@ -3,7 +3,7 @@ src-git packages https://github.com/zaiyuyishiyoudu/packages.git
 #x86_64----luci--------------------------------------------------
 src-git luci https://github.com/zaiyuyishiyoudu/luci.git
 
-#默认---luci-----------------------------------------------------
+##默认---luci-----------------------------------------------------
 #src-git luci https://github.com/zaiyuyishiyoudu/morenluci.git
 
 
