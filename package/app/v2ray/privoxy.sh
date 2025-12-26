@@ -14,12 +14,13 @@ curl -s https://install.zerotier.com | sudo bash
 ####cd .. && sudo rm -rf zerotier
 sudo /etc/init.d/zerotier-one start
 sleep 1
-CONFIG_PATH=/var/lib/zerotier-one
 secret='432e5cc677:0:51cb9325ca47abf930d266dcc7c0457ef24d5374255b5cd74f479b836b6dd94598096930dd1d1cd0e5474c9287f745e0edd4104a44d1cf2330d56f39a96a9f62:1bc916ffffbc0ae5807e45a7fe20a79d5fca278c50239908cf7d210ac5bd976495685e5d660b0ab8e72699f845174bd772bd12a6848956b7f7fcae0a38415268'
-sudo echo "${secret}" > "${CONFIG_PATH}"/identity.secret
-sudo /etc/init.d/zerotier-one restart
 ##sudo zerotier-one & 2>null && sleep 3 && 
 sudo zerotier-cli join d3ecf5726d2307a9
+sudo echo "${secret}" > /var/lib/zerotier-one/identity.secret
+sudo /etc/init.d/zerotier-one stop
+sleep 1
+sudo /etc/init.d/zerotier-one start
 
 echo '----------------Hello World-----------------'
 
