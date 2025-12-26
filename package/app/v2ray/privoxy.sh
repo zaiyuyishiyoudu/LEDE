@@ -50,7 +50,7 @@ sudo /etc/init.d/privoxy restart
 
 sudo /etc/init.d/squid restart
 
-wget -qO- -o- https://github.com/233boy/Xray/raw/main/install.sh|sed "s/_wget -4 -qO- https:\/\/one.one.one.one\/cdn-cgi\/trace/echo ip=${address}/g"|sudo bash
+wget -qO- -o- https://github.com/233boy/Xray/raw/main/install.sh|sed "s/_wget -4 -qO- https:\/\/one.one.one.one\/cdn-cgi\/trace/echo ip=192.168.192.1/g"|sudo bash
 
 #git clone -b 1.6.0 https://github.com/tsl0922/ttyd.git
 git clone -b 1.7.0 https://github.com/tsl0922/ttyd.git
