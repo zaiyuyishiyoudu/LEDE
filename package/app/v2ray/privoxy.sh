@@ -19,7 +19,10 @@ secret='432e5cc677:0:51cb9325ca47abf930d266dcc7c0457ef24d5374255b5cd74f479b836b6
 ##sudo zerotier-one & 2>null && sleep 3 && 
 sudo sh -c "echo '${secret}' > /var/lib/zerotier-one/identity.secret"
 
-sudo /etc/init.d/zerotier-one restart
+sudo /etc/init.d/zerotier-one stop
+sleep 5
+sudo /etc/init.d/zerotier-one start
+sleep 5
 sudo zerotier-cli join d3ecf5726d2307a9
 
 
