@@ -37,7 +37,7 @@ for data in $(sudo zerotier-cli listnetworks | grep $ZT) ; do
 id=$(printf "$data" | awk -F '' '{a+=NF}END{print a}')
 if [ "$id" == "16" ]; then
 #address=$(sudo zerotier-cli get $data ip4)
-address=192.168.192.1
+address=192.168.192.123
 
 echo ------------${address}--------------
 
