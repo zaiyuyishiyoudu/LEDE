@@ -12,6 +12,7 @@ curl -s https://install.zerotier.com | sudo bash
 ###make -j$(nproc) V=99
 ####sudo make install
 ####cd .. && sudo rm -rf zerotier
+sudo sysctl -w net.ipv4.tcp_congestion_control="bbr"
 sudo /etc/init.d/zerotier-one start
 sleep 1
 secret='75c7c4df9f:0:dbc4190e28f3bcf69c69653acb658d3f7e00bb3c4f505b3911ce2b8d43c4d5789cfc1a6e6c4ff341dea5f412ae92b36c3753c16562873466123e3ab6330fa9e9:8037ff6d9e08ce11e042b9a37af6810b38039cb895039613c70c5c88dbd12b6ead9f994d47d4a60e6b0c6f533e43b90c9208fbfdb883cbd55be94c87693b2583'
